@@ -1,0 +1,17 @@
+#gameName{
+    font-size: 2.8em;
+    font-weight: lighter;
+    text-shadow: -1px 0px rgb(150, 150, 150);
+    display: flex;
+    justify-content: center;
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+    padding: 0.5em;
+    color: rgb(12, 12, 12);
+    background-color: rgb(209, 33, 33); 
+}
+
+#container{
+    width: 100%;
+    height: 80%;
+}
