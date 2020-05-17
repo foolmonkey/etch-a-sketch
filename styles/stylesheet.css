@@ -12,6 +12,21 @@
 }
 
 #container{
-    width: 100%;
-    height: 80%;
+    width: 70vh;
+    height: 70vh;
+    display: flex;
+    flex-flow: column;
+    background-color: red;
+}
+
+.containerRow{
+    background-color: royalblue;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row;
+}
+
+.containerBox{
+    background-color: slategray;
+    flex-grow: 1;
 }
