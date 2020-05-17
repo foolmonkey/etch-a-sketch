@@ -1,4 +1,4 @@
-const defaultNumRows = 2;
+const defaultNumRows = 50;
 
 window.onload = generateBoxes(defaultNumRows);
 
@@ -18,6 +18,11 @@ function generateBoxes(numRows){
             containerBoxes[j] = document.createElement('div');
             containerBoxes[j].classList.add("containerBox");
     
+            // add hovering effect
+            containerBoxes[j].addEventListener('mouseenter', function(){
+                event.target.classList.add('filled') = 'filled';
+            });
+
             // append element to row
             containerRows[i].appendChild(containerBoxes[j]);
         }

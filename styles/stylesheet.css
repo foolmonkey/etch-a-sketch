@@ -16,17 +16,19 @@
     height: 70vh;
     display: flex;
     flex-flow: column;
-    background-color: red;
+    background-color: white;
 }
 
 .containerRow{
-    background-color: royalblue;
     flex-grow: 1;
     display: flex;
     flex-flow: row;
 }
 
 .containerBox{
-    background-color: slategray;
     flex-grow: 1;
+}
+
+.filled{
+    background-color: black;
 }
