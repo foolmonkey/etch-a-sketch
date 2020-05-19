@@ -12,11 +12,19 @@
 }
 
 #container{
-    width: 70vh;
-    height: 70vh;
+    width: 70vw;
+    height: 35vw;
+    max-width: 100%;
+    max-height: 50%;
     display: flex;
     flex-flow: column;
     background-color: white;
+    margin: auto;
+    margin-top: 3vh;
+    border-style: solid;
+    border-width: 15px;
+    border-radius: 10px;
+    border-color: rgb(209, 33, 33);
 }
 
 .containerRow{
@@ -31,4 +39,27 @@
 
 .filled{
     background-color: black;
+}
+
+#xPos, #yPos{
+    visibility: hidden;
+    margin: 0;
+    position: fixed;
+}
+
+form{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#drawMode{
+    width: 20vw;
+}
+
+legend{
+    padding: 5px 10px 5px 10px;
+    font-weight: 600;
+    font-size: 1.2em;
+    background-color: rgb(184, 184, 184);
 }

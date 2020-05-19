@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Etch A Sketch</title>
-        <meta charset="UTF-8" />
-        <link href="styles/cssreset.css" rel="stylesheet" type="text/css">
-        <link href="styles/stylesheet.css" rel="stylesheet" type="text/css">
-        
-        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">    
-    </head>
-    
-    <body>
-        <h1 id="gameName">Etch A Sketch</h1>
-    
-        <div id="container"></div>
 
-        <div id="xPos"></div>
-        <div id="yPos"></div>
+<head>
+    <title>Etch A Sketch</title>
+    <meta charset="UTF-8" />
+    <link href="styles/cssreset.css" rel="stylesheet" type="text/css">
+    <link href="styles/stylesheet.css" rel="stylesheet" type="text/css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;600;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="gameName">Etch A Sketch</h1>
+
+    <div id="container"></div>
+
+    <div id="xPos"></div>
+    <div id="yPos"></div>
+
+    <div id="drawing">
         <form id="drawMode">
             <legend>Drawing Mode</legend>
             <input type="radio" id="mouse" name="drawMode" value="Mouse" checked>
             <label for="mouse" tabindex="-1">Mouse</label>
             <input type="radio" id="arrow" name="drawMode" value="Arrow Keys">
             <label for="arrow" tabindex="-1">Arrow Keys</label>
-        <form>
+        </form>
 
         <form id="drawStyle">
             <legend>Styles</legend>
             <button id="reset">Reset</button>
         </form>
+    </div>
 
-        <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
 </html>

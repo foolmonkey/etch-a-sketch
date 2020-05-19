@@ -1,5 +1,6 @@
-const defaultNumRows = 5;
-const defaultNumColumns = 10;
+let defaultNumRows = 50;
+// x2 size of rows
+let defaultNumColumns = 100;
 
 let xPos = document.getElementById("xPos");
 let yPos = document.getElementById("yPos");
@@ -34,12 +35,10 @@ function generateBoxes(numRows, numColumns) {
     }
 
     // track position
-    let initialPos = Math.floor(defaultNumRows / 2);
+    xPos.textContent = Math.floor(numColumns / 2);    
+    yPos.textContent = Math.floor(numRows / 2);
 
-    xPos.textContent = initialPos;    
-    yPos.textContent = initialPos;
-
-    arrowKeyMode();
+    arrowKeyMode(numRows, numColumns);
 }
 
 function mouseMode(element) {
@@ -50,7 +49,7 @@ function mouseMode(element) {
     });
 }
 
-function arrowKeyMode() {
+function arrowKeyMode(numRows, numColumns) {
     // add keyboard events for arrow keys
     window.addEventListener('keydown', function (e) {
         if(drawMode[1].checked){
@@ -73,25 +72,23 @@ function arrowKeyMode() {
                 // right
                 case 'KeyD':
                 case 'ArrowRight':
-                    if(+xPos.textContent < defaultNumColumns - 1){
+                    if(+xPos.textContent < numColumns - 1){
                         xPos.textContent = Number(xPos.textContent) + 1;
                     }
                     break;
                 // down
                 case 'KeyS':
                 case 'ArrowDown':
-                    if(+yPos.textContent < defaultNumColumns - 1){
+                    if(+yPos.textContent < numRows - 1){
                         yPos.textContent = Number(yPos.textContent) + 1;
                     } 
-    
                     break;
             }
 
-            let row = Number(yPos.textContent) * defaultNumRows;
+            let row = Number(yPos.textContent) * numColumns;
             let index = Number(xPos.textContent) + row;
             let box = this.document.getElementsByClassName("containerBox")[index]; 
             
-
             box.style.backgroundColor = defaultFillColor;
         }
     });
