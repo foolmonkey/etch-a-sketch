@@ -15,12 +15,21 @@
     
         <div id="container"></div>
 
+        <div id="xPos"></div>
+        <div id="yPos"></div>
+
         <form id="drawMode">
-            <input type="radio" id="mouse" name="drawMode" value="Mouse">
-            <label for="mouse">Mouse</label>
+            <legend>Drawing Mode</legend>
+            <input type="radio" id="mouse" name="drawMode" value="Mouse" checked>
+            <label for="mouse" tabindex="-1">Mouse</label>
             <input type="radio" id="arrow" name="drawMode" value="Arrow Keys">
-            <label for="arrow">Arrow Keys</label>
+            <label for="arrow" tabindex="-1">Arrow Keys</label>
         <form>
+
+        <form id="drawStyle">
+            <legend>Styles</legend>
+            <button id="reset">Reset</button>
+        </form>
 
         <script type="text/javascript" src="script.js"></script>
 </html>
