@@ -8,7 +8,7 @@
     <link href="styles/cssreset.css" rel="stylesheet" type="text/css">
     <link href="styles/stylesheet.css" rel="stylesheet" type="text/css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;600;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Cabin:wght@500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -20,25 +20,18 @@
     <div id="xPos"></div>
     <div id="yPos"></div>
 
-    <div id="drawing">
+    <div id="allInputs">
         <form id="drawMode">
             <legend>Drawing Mode</legend>
             <input type="radio" id="mouse" name="drawMode" value="Mouse" checked>
             <label for="mouse" tabindex="-1">Mouse</label>
             <input type="radio" id="arrow" name="drawMode" value="Arrow Keys">
-            <label for="arrow" tabindex="-1">Arrow Keys</label>
-        </form>
-
-        <form id="drawStyle">
-            <legend>Styles</legend>
-            <label>Canvas Resolution:</label>
-            <input id="resolution" type="number" value="50">
+            <label for="arrow" tabindex="-1">Keyboard</label>
         </form>
 
         <form id="colour">
             <legend>Colours</legend>
-            <label>Canvas Resolution:</label>
-            
+
             <input type="radio" id="black" name="colour" value="black" checked>
             <label for="black" tabindex="-1">Black</label>
 
@@ -50,6 +43,13 @@
 
             <input type="radio" id="gradient" name="colour" value="gradient">
             <label for="gradient" tabindex="-1">Gradient</label>
+        </form>
+
+        <form id="drawStyle">
+            <legend>Canvas</legend>
+            <label>Resolution:</label>
+            <input id="resolution" type="number" value="50">
+            <button id="resetAll" type="button">CLEAR</button>
         </form>
     </div>
 

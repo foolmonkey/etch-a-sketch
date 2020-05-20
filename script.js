@@ -94,14 +94,14 @@ function arrowKeyMode(e) {
     }
 }
 
-// function resetCanvas(){
-//     console.log("e");
-//     let allItems = document.getElementsByClassName("containerBox");
+function resetCanvas(){
+    let allItems = document.getElementsByClassName("containerBox");
     
-//     for (let i =0; i < allItems.length; i++){
-//         allItems[i].style.backgroundColor = defaultColor;
-//     }
-// }
+    for (let i =0; i < allItems.length; i++){
+        allItems[i].style.backgroundColor = '';
+        allItems[i].style.opacity = '';
+    }
+}
 
 function changeSize(){
     let canvas = document.getElementById("container");
@@ -127,7 +127,7 @@ function colorSelection(box){
             box.style.opacity = '1';
             return 'black';
         case 'white':
-            box.style.opacity = '0';
+            box.style.opacity = '';
             return 'white';
         case 'gradient':
             //let colour = `hsl(${originalColour}%,${originalColour}%,${originalColour}%)`;
@@ -139,21 +139,19 @@ function colorSelection(box){
 }
 
 // draw mode button behaviour
-let drawModeButtons = document.getElementsByName("drawMode");
+let drawButtons = document.getElementsByTagName("input");
 
-drawModeButtons[0].onchange = function(e) {
-    document.activeElement.blur();
-};
-
-drawModeButtons[1].onchange = function(e) {
-    document.activeElement.blur();
-};
+for(let i = 0; i < drawButtons.length; i++){
+    drawButtons[i].onchange = function(e) {
+        document.activeElement.blur();
+    };
+}
 
 document.onkeydown = arrowKeyMode;
 
-// let changeResolutionButton = document.getElementById("changeResolution");
-// changeResolutionButton.onclick = changeSize;
-
 let sizeInput = document.getElementById("resolution");
 sizeInput.onchange = changeSize;
+
+let resetButton = document.getElementById("resetAll");
+resetButton.onclick = resetCanvas;
 
