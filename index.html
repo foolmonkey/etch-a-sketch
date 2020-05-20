@@ -31,7 +31,25 @@
 
         <form id="drawStyle">
             <legend>Styles</legend>
-            <button id="reset">Reset</button>
+            <label>Canvas Resolution:</label>
+            <input id="resolution" type="number" value="50">
+        </form>
+
+        <form id="colour">
+            <legend>Colours</legend>
+            <label>Canvas Resolution:</label>
+            
+            <input type="radio" id="black" name="colour" value="black" checked>
+            <label for="black" tabindex="-1">Black</label>
+
+            <input type="radio" id="white" name="colour" value="white">
+            <label for="white" tabindex="-1">White</label>
+
+            <input type="radio" id="randomColour" name="colour" value="randomColour">
+            <label for="randomColour" tabindex="-1">Random Colour</label>
+
+            <input type="radio" id="gradient" name="colour" value="gradient">
+            <label for="gradient" tabindex="-1">Gradient</label>
         </form>
     </div>
 
