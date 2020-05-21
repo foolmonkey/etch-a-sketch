@@ -66,6 +66,7 @@ function arrowKeyMode(e) {
             // up
             case 'KeyW':
             case 'ArrowUp':
+                e.preventDefault();
                 if(+yPos.textContent > 0){
                     yPos.textContent = Number(yPos.textContent) - 1;
                 }
@@ -73,6 +74,7 @@ function arrowKeyMode(e) {
             // right
             case 'KeyD':
             case 'ArrowRight':
+                e.preventDefault();
                 if(+xPos.textContent < numColumns - 1){
                     xPos.textContent = Number(xPos.textContent) + 1;
                 }
@@ -96,8 +98,8 @@ function arrowKeyMode(e) {
 
 function resetCanvas(){
     let allItems = document.getElementsByClassName("containerBox");
-    
-    for (let i =0; i < allItems.length; i++){
+    let numItems = allItems.length;
+    for (let i =0; i < numItems; i++){
         allItems[i].style.backgroundColor = '';
         allItems[i].style.opacity = '';
     }

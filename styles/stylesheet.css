@@ -16,8 +16,8 @@ body{
 }
 
 #container{
-    width: 80vw;
-    height: 40vw;
+    width: 70vw;
+    height: 35vw;
     max-width: 100%;
     max-height: 50%;
     display: flex;
