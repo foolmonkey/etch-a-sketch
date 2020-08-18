@@ -7,9 +7,13 @@
     <meta charset="UTF-8" />
     <link href="styles/cssreset.css" rel="stylesheet" type="text/css">
     <link href="styles/stylesheet.css" rel="stylesheet" type="text/css">
-
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Cabin:wght@500;600;700&display=swap"
         rel="stylesheet">
+
+    <script
+      src="https://kit.fontawesome.com/64486ec299.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 
 <body>
@@ -45,12 +49,16 @@
             <label for="gradient" tabindex="-1">Gradient</label>
         </form>
 
-        <form id="drawStyle">
+        <form id="drawStyle"  onsubmit="return false">
             <legend>Canvas</legend>
             <label>Resolution:</label>
             <input id="resolution" type="number" value="50">
             <button id="resetAll" type="button">CLEAR</button>
         </form>
+
+        <a id="github" href="https://github.com/foolmonkey"
+        ><i class="fab fa-github fa-2x"></i
+      ></a>
     </div>
 
     <script type="text/javascript" src="script.js"></script>
