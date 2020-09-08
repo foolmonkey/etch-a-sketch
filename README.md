@@ -5,4 +5,8 @@ This is an interactive recreation of Etch a Sketch built with HTML, CSS, and bas
 
 -Draw using keyboard inputs (use arrow keys or 'WASD' keys) or the mouse (by hovering over the canvas)
 
-View Here: https://foolmonkey.github.io/etch-a-sketch/
+View live at: https://foolmonkey.github.io/etch-a-sketch/
+
+Preview (GIF)
+-----------
+![](etch.gif)
